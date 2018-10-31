@@ -16,25 +16,17 @@ public class LeitorJsonHelper {
 	
 public  Lancamento carregarArquivo() {
 		
-		final Gson gson = new Gson();
+		Gson gson = new Gson();
 		
 		Lancamento lacamento = null;
-		
 		ClassLoader classLoader = getClass().getClassLoader();
 
 		try {
-			
 			String file = classLoader.getResource("lancamento-conta-legado.json").getFile();
-			
-			System.out.println(file);
-			
-			lacamento = gson.fromJson(new FileReader(file), 
-					Lancamento.class);
+			lacamento = gson.fromJson(new FileReader(file), Lancamento.class);
 			
 		} catch (JsonSyntaxException | JsonIOException | FileNotFoundException e) {
-			e.printStackTrace();
-			
-			
+			e.printStackTrace();	
 		} 
 		
 		return lacamento;

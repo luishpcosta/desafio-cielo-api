@@ -2,12 +2,9 @@ package com.desafio.cielo.models;
 
 public class TotalControleLancamento {
 
-
-	
 	private Integer quantidadeLancamentos;
 	private Integer quantidadeRemessas;
 	private Float valorLancamentos;
-	
 
 	public Integer getQuantidadeLancamentos() {
 		return quantidadeLancamentos;

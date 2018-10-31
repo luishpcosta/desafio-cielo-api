@@ -6,8 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.desafio.cielo.models.LancamentoViewObject;
@@ -21,12 +21,9 @@ public class LancamentoContaResource {
 	@Autowired
 	private LancamentoService lancamentoService;
 	
-	@RequestMapping(value = "/lancamentos", method = RequestMethod.GET)
+	@GetMapping(value = "/lancamentos")
 	public ResponseEntity<List<LancamentoViewObject>> listAll() {
-		
-		final List<LancamentoViewObject> lancamentos = lancamentoService.carregarLancamento();
-
-		return new ResponseEntity<List<LancamentoViewObject>>(lancamentos, HttpStatus.OK);
+		return new ResponseEntity<List<LancamentoViewObject>>(lancamentoService.carregarLancamento(), HttpStatus.OK);
 	}
 
 }

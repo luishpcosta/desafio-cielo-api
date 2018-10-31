@@ -13,15 +13,15 @@ public class LancamentoContaBuilder {
 		
 		private List<LancamentoViewObject> listaLancamento = new ArrayList<>();
 
-		public Builder(final Lancamento lancamento) {
+		public Builder(Lancamento lancamento) {
 
 			lancamento.getListaControleLancamento().forEach(l -> {
 				
 				LancamentoViewObject lancamentoConta = new LancamentoViewObject();
 				
 				lancamentoConta.setDadosBancarios(l.getDadosBancarios());
-				lancamentoConta.setDataDeConfirmacao(l.getDataEfetivaLancamento());
-				lancamentoConta.setDataDeLancamento(l.getDataLancamentoContaCorrenteCliente());
+				lancamentoConta.setDataConfirmacao(l.getDataEfetivaLancamento());
+				lancamentoConta.setDataLancamento(l.getDataLancamentoContaCorrenteCliente());
 				lancamentoConta.setDescricao(l.getDescricaoGrupoPagamento());
 				lancamentoConta.setSituacao(l.getLancamentoContaCorrenteCliente().getNomeSituacaoRemessa());
 				lancamentoConta.setNumero(l.getNumeroEvento());

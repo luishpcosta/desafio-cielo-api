@@ -5,20 +5,20 @@ import java.math.BigDecimal;
 public class LancamentoViewObject {
 	
 
-	private String dataDeLancamento;
+	private String dataLancamento;
 	private String descricao;
 	private Integer numero;
 	private String situacao;
-	private String dataDeConfirmacao;
+	private String dataConfirmacao;
 	private String dadosBancarios;
 	private BigDecimal valorFinal;
 	
-	public String getDataDeLancamento() {
-		return dataDeLancamento;
+	public String getDataLancamento() {
+		return dataLancamento;
 	}
 	
-	public void setDataDeLancamento(String dataDeLancamento) {
-		this.dataDeLancamento = dataDeLancamento;
+	public void setDataLancamento(String dataDeLancamento) {
+		this.dataLancamento = dataDeLancamento;
 	}
 	
 	public String getDescricao() {
@@ -45,12 +45,12 @@ public class LancamentoViewObject {
 		this.situacao = situacao;
 	}
 	
-	public String getDataDeConfirmacao() {
-		return dataDeConfirmacao;
+	public String getDataConfirmacao() {
+		return dataConfirmacao;
 	}
 	
-	public void setDataDeConfirmacao(String dataDeConfirmacao) {
-		this.dataDeConfirmacao = dataDeConfirmacao;
+	public void setDataConfirmacao(String dataConfirmacao) {
+		this.dataConfirmacao = dataConfirmacao;
 	}
 	
 	public String getDadosBancarios() {

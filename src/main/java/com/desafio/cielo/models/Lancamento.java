@@ -7,13 +7,10 @@ public class Lancamento {
 
 
 	private TotalControleLancamento totalControleLancamento;
-
 	private List<ListaControleLancamento> listaControleLancamento;
-
 	private Integer indice;
 	private Integer tamanhoPagina;
 	private Integer totalElements;
-
 
 	public TotalControleLancamento getTotalControleLancamento() {
 		return totalControleLancamento;

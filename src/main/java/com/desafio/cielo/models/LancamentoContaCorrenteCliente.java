@@ -2,14 +2,10 @@ package com.desafio.cielo.models;
 
 public class LancamentoContaCorrenteCliente  {
 
-	
 	private Long numeroRemessaBanco;
 	private String nomeSituacaoRemessa;
-	
 	private DadosDomicilioBancario dadosDomicilioBancario;
 	private String nomeTipoOperacao;
-
-
 
 	public Long getNumeroRemessaBanco() {
 		return numeroRemessaBanco;
