@@ -6,7 +6,7 @@ import java.util.List;
 import com.desafio.cielo.models.Lancamento;
 import com.desafio.cielo.models.LancamentoViewObject;
 
-public class ContaBuilder {
+public class LancamentoContaBuilder {
 
 	public static class Builder {
 
@@ -23,7 +23,7 @@ public class ContaBuilder {
 				lancamentoConta.setDataDeConfirmacao(l.getDataEfetivaLancamento());
 				lancamentoConta.setDataDeLancamento(l.getDataLancamentoContaCorrenteCliente());
 				lancamentoConta.setDescricao(l.getDescricaoGrupoPagamento());
-				lancamentoConta.setSituacao(l.getSituacao());
+				lancamentoConta.setSituacao(l.getLancamentoContaCorrenteCliente().getNomeSituacaoRemessa());
 				lancamentoConta.setNumero(l.getNumeroEvento());
 				lancamentoConta.setValorFinal(l.getValorLancamentoRemessa());
 

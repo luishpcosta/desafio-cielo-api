@@ -6,7 +6,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.desafio.cielo.builder.ContaBuilder;
+import com.desafio.cielo.builder.LancamentoContaBuilder;
 import com.desafio.cielo.helper.LeitorJsonHelper;
 import com.desafio.cielo.models.Lancamento;
 import com.desafio.cielo.models.LancamentoViewObject;
@@ -24,7 +24,7 @@ public class LancamentoServiceImpl implements LancamentoService {
 		final Lancamento lancamento = LeitorJsonHelper.carregarArquivo();
 		
 		if(lancamento != null)
-			return new ContaBuilder.Builder(lancamento).build();
+			return new LancamentoContaBuilder.Builder(lancamento).build();
 		
 		return null;
 	}

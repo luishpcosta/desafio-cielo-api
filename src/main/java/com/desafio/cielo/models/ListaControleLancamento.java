@@ -141,14 +141,4 @@ public class ListaControleLancamento {
 		return dadosBancarios.toString();
 	}
 
-	public String getSituacao() {
-		String situacao = null;
-		
-		if (this.getLancamentoContaCorrenteCliente().getNomeSituacaoRemessa() != null) {
-			situacao = this.getLancamentoContaCorrenteCliente().getNomeSituacaoRemessa();
-		}
-				
-		return situacao;
-	}
-
 }
